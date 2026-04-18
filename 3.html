@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Athlete Sport - Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-slate-100 text-slate-900">
+  <div class="bg-[#f0b400] text-[#10207f] text-center text-sm font-bold py-2">WELCOME BACK • MEMBER LOGIN • EXCLUSIVE DEALS &amp; FAST CHECKOUT</div>
+
+  <header class="bg-[#13208a] text-white border-b-4 border-[#f0b400] shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <div class="bg-white/10 rounded-2xl p-2 ring-1 ring-white/15">
+          <img src="1.jpg" alt="The Athlete Sport logo" class="h-16 w-auto rounded-lg object-contain" />
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-[0.25em] text-yellow-300">Member access</p>
+          <h1 class="text-2xl font-black uppercase">The Athlete Sport</h1>
+        </div>
+      </div>
+      <a href="#" class="rounded-full border border-white/30 px-5 py-2 text-sm font-bold text-white hover:bg-white/10">Back to homepage</a>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 py-10 lg:py-14">
+    <div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] items-stretch">
+      <section class="relative overflow-hidden rounded-[32px] bg-[#13208a] text-white shadow-2xl min-h-[620px]">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#17259b] via-[#13208a] to-[#0e1970]"></div>
+        <div class="absolute -top-20 -right-16 h-64 w-64 rounded-full bg-[#f0b400]/20 blur-2xl"></div>
+        <div class="absolute -bottom-24 -left-12 h-72 w-72 rounded-full bg-white/10 blur-2xl"></div>
+
+        <div class="relative z-10 flex h-full flex-col justify-between p-8 md:p-10">
+          <div>
+            <div class="inline-block rounded-full bg-white/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.3em] text-yellow-300">Sign in to continue</div>
+            <h2 class="mt-5 text-4xl md:text-5xl font-black uppercase leading-tight">Train harder. Shop faster. Stay signed in.</h2>
+            <p class="mt-5 max-w-xl text-base md:text-lg text-blue-100">Access your saved items, member offers, faster checkout and order tracking with the same bold retail style as your homepage.</p>
+          </div>
+
+          <div class="grid gap-4 md:grid-cols-3 mt-10">
+            <div class="rounded-3xl bg-white/10 p-5 ring-1 ring-white/10">
+              <div class="text-xs font-black uppercase tracking-[0.25em] text-yellow-300">Member deals</div>
+              <div class="mt-2 text-2xl font-black">Exclusive offers</div>
+              <p class="mt-2 text-sm text-blue-100">Unlock promo pricing on activewear, footwear and fragrance.</p>
+            </div>
+            <div class="rounded-3xl bg-white/10 p-5 ring-1 ring-white/10">
+              <div class="text-xs font-black uppercase tracking-[0.25em] text-yellow-300">Fast checkout</div>
+              <div class="mt-2 text-2xl font-black">Saved details</div>
+              <p class="mt-2 text-sm text-blue-100">Keep delivery info and payment preferences ready to go.</p>
+            </div>
+            <div class="rounded-3xl bg-white/10 p-5 ring-1 ring-white/10">
+              <div class="text-xs font-black uppercase tracking-[0.25em] text-yellow-300">Order updates</div>
+              <div class="mt-2 text-2xl font-black">Track anytime</div>
+              <p class="mt-2 text-sm text-blue-100">See shipping status, recent purchases and returns in one place.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex items-center">
+        <div class="w-full rounded-[32px] border-4 border-[#f0b400] bg-white p-6 md:p-8 shadow-2xl">
+          <div class="flex items-center justify-between gap-4">
+            <div>
+              <p class="text-sm font-black uppercase tracking-[0.25em] text-[#13208a]">Account login</p>
+              <h3 class="mt-2 text-3xl font-black uppercase text-slate-900">Welcome back</h3>
+            </div>
+            <div class="hidden sm:flex h-14 w-14 items-center justify-center rounded-2xl bg-[#13208a] text-white text-2xl shadow-lg">🏃</div>
+          </div>
+
+          <form class="mt-8 space-y-5">
+            <div>
+              <label class="mb-2 block text-sm font-bold uppercase tracking-wide text-[#13208a]">Email address</label>
+              <input type="email" placeholder="Enter your email" class="w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-[#13208a] focus:ring-4 focus:ring-[#13208a]/10" />
+            </div>
+
+            <div>
+              <div class="mb-2 flex items-center justify-between gap-3">
+                <label class="block text-sm font-bold uppercase tracking-wide text-[#13208a]">Password</label>
+                <a href="#" class="text-sm font-bold text-[#13208a] hover:underline">Forgot password?</a>
+              </div>
+              <input type="password" placeholder="Enter your password" class="w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-[#13208a] focus:ring-4 focus:ring-[#13208a]/10" />
+            </div>
+
+            <div class="flex items-center justify-between gap-4 text-sm">
+              <label class="flex items-center gap-3 text-slate-600">
+                <input type="checkbox" class="h-4 w-4 rounded border-slate-300 text-[#13208a] focus:ring-[#13208a]" />
+                Keep me signed in
+              </label>
+              <span class="font-semibold text-slate-500">Secure login</span>
+            </div>
+
+            <button type="submit" class="w-full rounded-full bg-[#13208a] px-6 py-3.5 text-base font-black uppercase tracking-wide text-white shadow-lg transition hover:bg-[#0e1970]">Sign in</button>
+
+            <div class="relative py-1 text-center">
+              <span class="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-slate-200"></span>
+              <span class="relative bg-white px-4 text-sm font-bold uppercase tracking-wide text-slate-400">or</span>
+            </div>
+
+            <button type="button" class="w-full rounded-full border-2 border-[#13208a] px-6 py-3.5 text-base font-black uppercase tracking-wide text-[#13208a] transition hover:bg-[#13208a] hover:text-white">Create account</button>
+          </form>
+
+          <div class="mt-8 grid gap-4 sm:grid-cols-2">
+            <div class="rounded-3xl bg-slate-50 p-5 ring-1 ring-slate-200">
+              <div class="text-sm font-black uppercase tracking-[0.2em] text-[#13208a]">Member benefit</div>
+              <p class="mt-2 text-sm text-slate-600">Faster checkout and saved favourites across sport activewear and fragrance picks.</p>
+            </div>
+            <div class="rounded-3xl bg-[#13208a] p-5 text-white shadow-lg">
+              <div class="text-sm font-black uppercase tracking-[0.2em] text-yellow-300">Need help?</div>
+              <p class="mt-2 text-sm text-blue-100">Contact customer care for login support, returns and delivery questions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
