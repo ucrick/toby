@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Athlete Sport - Staff Portal</title>
+  <style>
+    :root{
+      --blue:#111a86;
+      --blue-dark:#06105f;
+      --yellow:#f4bf00;
+      --bg:#f3f6fb;
+      --card:#ffffff;
+      --text:#0f1b72;
+      --border:#e5e9f2;
+      --shadow:0 14px 30px rgba(12,18,80,.12);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      min-height:100vh;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    .header{
+      height:150px;
+      background:linear-gradient(180deg,var(--blue-dark),var(--blue));
+      border-bottom:7px solid var(--yellow);
+      display:flex;
+      align-items:flex-start;
+      gap:34px;
+      padding:22px 56px 0;
+    }
+
+    .logo-box{
+      width:170px;
+      height:115px;
+      background:#fff;
+      border-radius:16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px;
+      box-shadow:0 10px 24px rgba(0,0,0,.2);
+      flex:0 0 auto;
+    }
+
+    .logo-box img{
+      max-width:100%;
+      max-height:100%;
+      object-fit:contain;
+    }
+
+    .header-right{
+      margin-left:auto;
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:28px;
+      padding-top:8px;
+    }
+
+    .hr-btn{
+      height:72px;
+      min-width:190px;
+      padding:0 38px;
+      border-radius:16px;
+      background:linear-gradient(180deg,#ffd53e,var(--yellow));
+      color:var(--blue-dark);
+      border:3px solid #fff;
+      box-shadow:0 8px 18px rgba(0,0,0,.25), inset 0 -3px 0 rgba(0,0,0,.08);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      font-size:30px;
+      font-weight:900;
+      letter-spacing:4px;
+      transition:.18s ease;
+    }
+
+    .hr-btn:hover{
+      transform:translateY(-2px);
+      filter:brightness(1.03);
+    }
+
+    .divider{
+      width:2px;
+      height:70px;
+      background:rgba(255,255,255,.65);
+    }
+
+    .store-name{
+      color:#fff;
+      font-size:38px;
+      font-weight:900;
+      letter-spacing:7px;
+      text-transform:uppercase;
+      white-space:nowrap;
+      text-shadow:0 3px 10px rgba(0,0,0,.22);
+    }
+
+    .main{
+      max-width:1580px;
+      margin:0 auto;
+      padding:28px 54px 42px;
+    }
+
+    .content-wrap{
+      display:grid;
+      grid-template-columns:220px 1fr;
+      gap:24px;
+      align-items:start;
+    }
+
+    .side-panel{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .mycom-card{
+      min-height:96px;
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 24px;
+      text-decoration:none;
+      color:var(--text);
+      transition:.18s ease;
+    }
+
+    .mycom-card:hover,
+    .tile:hover{
+      transform:translateY(-3px);
+      box-shadow:0 18px 38px rgba(12,18,80,.18);
+    }
+
+    .mycom-card .label{
+      font-size:24px;
+      line-height:1.1;
+      letter-spacing:1.5px;
+      font-weight:900;
+      text-transform:uppercase;
+    }
+
+    .grid-panel{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:22px;
+    }
+
+    .tile{
+      min-height:142px;
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 28px;
+      text-decoration:none;
+      color:var(--text);
+      transition:.18s ease;
+    }
+
+    .tile.tall{
+      min-height:170px;
+    }
+
+    .tile .label{
+      font-size:26px;
+      line-height:1.14;
+      letter-spacing:1.5px;
+      font-weight:900;
+      text-transform:uppercase;
+    }
+
+    .arrow{
+      font-size:46px;
+      line-height:1;
+      font-weight:300;
+      color:var(--yellow);
+      flex:0 0 auto;
+      margin-left:18px;
+    }
+
+    .footer{
+      height:76px;
+      background:linear-gradient(180deg,var(--blue),var(--blue-dark));
+      border-top:4px solid var(--yellow);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:22px;
+      font-size:16px;
+      letter-spacing:7px;
+      text-transform:uppercase;
+      margin-top:8px;
+    }
+
+    .dot{
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:var(--yellow);
+      display:inline-block;
+    }
+
+    @media(max-width:1200px){
+      .header{
+        height:auto;
+        padding:22px 24px;
+        flex-wrap:wrap;
+      }
+
+      .header-right{
+        margin-left:0;
+        width:100%;
+        justify-content:flex-start;
+        flex-wrap:wrap;
+      }
+
+      .store-name{
+        font-size:30px;
+        letter-spacing:4px;
+        white-space:normal;
+      }
+
+      .main{
+        padding:24px;
+      }
+
+      .content-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .side-panel{
+        max-width:320px;
+      }
+
+      .grid-panel{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media(max-width:760px){
+      .grid-panel{
+        grid-template-columns:1fr;
+      }
+
+      .logo-box{
+        width:135px;
+        height:92px;
+      }
+
+      .hr-btn{
+        min-width:140px;
+        height:58px;
+        font-size:24px;
+      }
+
+      .divider{
+        display:none;
+      }
+
+      .tile,
+      .mycom-card{
+        min-height:94px;
+      }
+
+      .tile .label{
+        font-size:22px;
+      }
+
+      .mycom-card .label{
+        font-size:22px;
+      }
+
+      .footer{
+        font-size:11px;
+        letter-spacing:3px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-box">
+      <img src="1.jpg" alt="The Athlete Sport Logo" />
+    </div>
+
+    <div class="header-right">
+      <a class="hr-btn" href="2.html">HR</a>
+      <div class="divider"></div>
+      <div class="store-name">THE ATHLETE SPORT</div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="content-wrap">
+      <aside class="side-panel">
+        <a class="mycom-card" href="#">
+          <div class="label">MY COM</div>
+          <div class="arrow">›</div>
+        </a>
+      </aside>
+
+      <section class="grid-panel">
+        <a class="tile" href="#">
+          <div class="label">STORE OP</div>
+          <div class="arrow">›</div>
+        </a>
+
+        <a class="tile" href="#">
+          <div class="label">MY WEB</div>
+          <div class="arrow">›</div>
+        </a>
+
+        <a class="tile" href="#">
+          <div class="label">STORE EMAIL</div>
+          <div class="arrow">›</div>
+        </a>
+
+        <a class="tile tall" href="#">
+          <div class="label">STORE PRICE<br>SPECIAL</div>
+          <div class="arrow">›</div>
+        </a>
+
+        <a class="tile tall" href="#">
+          <div class="label">AUS<br>STORE<br>INFO</div>
+          <div class="arrow">›</div>
+        </a>
+
+        <a class="tile tall" href="#">
+          <div class="label">NZ<br>STORE<br>INFO</div>
+          <div class="arrow">›</div>
+        </a>
+
+        <a class="tile" href="#">
+          <div class="label">MY STORE</div>
+          <div class="arrow">›</div>
+        </a>
+
+        <a class="tile" href="#">
+          <div class="label">LOSS PREV</div>
+          <div class="arrow">›</div>
+        </a>
+
+        <a class="tile" href="#">
+          <div class="label">PROMOTIONS</div>
+          <div class="arrow">›</div>
+        </a>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Teamwork</span>
+    <span class="dot"></span>
+    <span>Performance</span>
+    <span class="dot"></span>
+    <span>Community</span>
+  </footer>
+</body>
+</html>
